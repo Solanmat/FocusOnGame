@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "h9GmiBaLT12QcpVFgpOw3S1D+n8z73WDaNC3m8p5Y7E=",
+  "Source": "FocusOnGame.Api",
+  "BasePath": "_content/FocusOnGame.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
