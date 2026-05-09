@@ -8,7 +8,6 @@ export default function DashboardGames() {
 
   const [newGame, setNewGame] = useState("");
 
-  // CREATE
   const addGame = (e) => {
     e.preventDefault();
 
@@ -22,12 +21,10 @@ export default function DashboardGames() {
     setNewGame("");
   };
 
-  // DELETE
   const deleteGame = (id) => {
     setGames(games.filter((g) => g.id !== id));
   };
 
-  // EDIT (simple prompt pour l’instant)
   const editGame = (game) => {
     const newName = prompt("New name:", game.name);
 

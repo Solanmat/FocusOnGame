@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FocusOnGame.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1eb2a0a1400ae0ba74794060c98100cd3750826e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4e1fd2950d2e9805330978986b5326ca84a0463")]
 [assembly: System.Reflection.AssemblyProductAttribute("FocusOnGame.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FocusOnGame.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
