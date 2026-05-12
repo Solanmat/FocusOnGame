@@ -7,13 +7,13 @@ export async function register(data) {
     body: JSON.stringify(data)
   });
 
-  const text = await res.text();
+  const json = await res.json();
 
   if (!res.ok) {
-    throw new Error(text);
+    throw new Error(json.message || "Register failed");
   }
 
-  return text;
+  return json;
 }
 
 export async function login(data) {
@@ -23,11 +23,11 @@ export async function login(data) {
     body: JSON.stringify(data)
   });
 
-  const text = await res.text();
+  const json = await res.json();
 
   if (!res.ok) {
-    throw new Error(text);
+    throw new Error(json.message || "Login failed");
   }
 
-  return text;
+  return json;
 }

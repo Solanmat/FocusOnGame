@@ -5,12 +5,12 @@ namespace FocusOnGame.Api.Models
     public class User
     {
         [Column("id")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
-        [Column("firstName")]
+        [Column("firstname")]
         public string FirstName { get; set; }
 
-        [Column("lastName")]
+        [Column("lastname")]
         public string LastName { get; set; }
 
         [Column("username")]

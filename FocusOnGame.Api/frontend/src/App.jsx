@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import DashboardGames from "./pages/DashboardGames";
+import DashboardPathways from "./pages/DashboardPathways";
 import GameCreator from "./pages/GameCreator";
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboardGames" element={<DashboardGames />} />
-        <Route path="/gameCreator" element={<GameCreator />} />
+        <Route path="/dashboardPathways/:idUser" element={<DashboardPathways />} />
+        <Route path="/gameCreator/:idUser/:namePathway" element={<GameCreator />} />
       </Routes>
     </BrowserRouter>
   );

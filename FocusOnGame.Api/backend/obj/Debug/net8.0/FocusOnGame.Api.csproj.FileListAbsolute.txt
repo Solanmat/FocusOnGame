@@ -35,3 +35,4 @@ C:\FocusOnGame\FocusOnGame.Api\backend\bin\Debug\net8.0\Npgsql.EntityFrameworkCo
 C:\FocusOnGame\FocusOnGame.Api\backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\FocusOnGame\FocusOnGame.Api\backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\FocusOnGame\FocusOnGame.Api\backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\FocusOnGame\FocusOnGame.Api\backend\obj\Debug\net8.0\FocusOnGame.Api.sourcelink.json

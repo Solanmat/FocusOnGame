@@ -22,9 +22,8 @@ export default function Login() {
     setError("");
 
     try {
-      const data = await login(form);
-      console.log("Login success:", data);
-      navigate("/dashboardGames");
+      const user = await login(form);
+      navigate(`/dashboardPathways/${user.id}`);
 
     } catch (error) {
       console.error("Login error:", error);

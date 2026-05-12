@@ -19,21 +19,20 @@ namespace FocusOnGame.Api.Controllers
             _authService = authService;
         }
 
+        // 🧾 REGISTER
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto dto)
         {
-        
             var existingUser = _context.Users
-            .FirstOrDefault(x => x.Username == dto.Username);
+                .FirstOrDefault(x => x.Username == dto.Username);
 
             var existingEmail = _context.Users
-            .FirstOrDefault(x => x.Email == dto.Email);
+                .FirstOrDefault(x => x.Email == dto.Email);
 
-            if ((existingUser != null) || (existingEmail != null))
+            if (existingUser != null || existingEmail != null)
             {
-                return BadRequest(new { message = "Username already exists" });
+                return BadRequest(new { message = "Username or email already exists" });
             }
-
 
             var user = new User
             {
@@ -49,29 +48,34 @@ namespace FocusOnGame.Api.Controllers
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return Ok("User created");
+            return Ok(new
+            {
+                userId = user.Id
+            });
         }
 
+        // 🔐 LOGIN
         [HttpPost("login")]
         public IActionResult Login(LoginDto loginDto)
         {
-            var user = _context.Users.FirstOrDefault(x => x.Email == loginDto.Email);
+            var user = _context.Users
+                .FirstOrDefault(x => x.Email == loginDto.Email);
 
             if (user == null)
             {
-                Console.WriteLine("test 1");
-                return Unauthorized();
+                return Unauthorized(new { message = "Invalid credentials" });
             }
 
             if (!_authService.VerifyPassword(user, loginDto.Password))
             {
-                Console.WriteLine("test 2");
-                return Unauthorized();
+                return Unauthorized(new { message = "Invalid credentials" });
             }
 
-            Console.WriteLine(user.Username);
-
-            return Ok("Login success");
+            return Ok(new LoginResponseDto
+            {
+                Id = user.Id,
+                Username = user.Username
+            });
         }
     }
 }

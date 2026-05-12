@@ -23,10 +23,8 @@ export default function Register() {
     setError("");
 
     try {
-      const data = await register(form);
-      navigate("/dashboardGames");
-
-      console.log("Register success:", data);
+      const idUser = await register(form);
+      navigate(`/dashboardPathways/${idUser}`);
 
     } catch (error) {
       console.error("Register error:", error);

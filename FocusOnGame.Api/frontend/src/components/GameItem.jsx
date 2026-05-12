@@ -45,7 +45,6 @@ export default function GameItem({
       `}
       onClick={() => setSelectedId(game.id)}
     >
-      {/* DRAG HANDLE */}
       <div
         {...attributes}
         {...listeners}
@@ -54,12 +53,10 @@ export default function GameItem({
         ☰
       </div>
 
-      {/* TITLE */}
       <div className="flex-1">
         {game.name}
       </div>
 
-      {/* DELETE */}
       <button
         onClick={(e) => {
           e.stopPropagation();

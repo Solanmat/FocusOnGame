@@ -13,7 +13,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // SERVICES
 builder.Services.AddScoped<AuthService>();
-
+builder.Services.AddScoped<GameService>();
+builder.Services.AddScoped<PathwayService>();
 
 // CONTROLLERS
 builder.Services.AddControllers();
